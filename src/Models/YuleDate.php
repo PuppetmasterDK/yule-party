@@ -13,8 +13,16 @@ class YuleDate {
 	 */
 	private $date;
 
-	public function __construct(Carbon $date) {
+	/**
+	 * True if we should only look in this year
+	 *
+	 * @var boolean
+	 */
+	private $strict;
+
+	public function __construct(Carbon $date, $strict = false) {
 		$this->date = $date->copy();
+		$this->strict = $strict;
 	}
 
 	/**
@@ -24,7 +32,7 @@ class YuleDate {
 	 */
 	public function getYulePartyDate() {
 		$potentialDate = $this->fromDateToYuleDate($this->date->copy()->month(12)->day(1)->hour(15)->minute(0)->second(0));
-		if ($potentialDate->isSameDay($this->date) || $potentialDate->gte($this->date)) {
+		if ($this->strict || $potentialDate->isSameDay($this->date) || $potentialDate->gte($this->date)) {
 			return $potentialDate;
 		}
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Er der julefest nu?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+    <link rel="image_src" href="thumbnail.png" />
+    <link rel="icon" type="image/ico" href="favicon.ico">
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="row">
+            <a href="#" id="audio-controls" class="play">pause</a>
+            <div class="span12" style="margin-top: 40px">
+                <h2>Er der julefest nu?</h2>
+                <h1>Nej</h1>
+            </div>
+            <div class="span6 margin5 offset3">
+                <h2>Der er julefest om </h2>
+                <div class="margin5 hasCountdown" id="countdown"></div>
+            </div>
+            <div class="span6 margin5 offset3">
+                <h2>eller skrevet p&aring; en anden m&aring;de</h2>
+                <h1>{{date}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio controls="controls" autoplay="autoplay" loop="loop" id="audio">
+    <source src="img/christmas_song.mp3" type="audio/mp3">
+    <source src="img/christmas_song.ogg" type="audio/ogg">
+</audio>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/player.js"></script>
+<script src="js/snowstorm.js"></script>
+<script type="text/javascript">$("[rel=next]").tooltip();</script>
+<script type="text/javascript">
+    $(function () {
+        var wrapInCountDownSpans = function(number, unit) {
+            return '<span class="countdown_section"><span class="countdown_amount">' + number + '</span><br>' + unit + '</span>'
+        };
+        $('#countdown').countdown('{{countdownDate}}').on('update.countdown', function(event) {
+            var $this = $(this).html(event.strftime('<span class="countdown_row countdown_show4">'
+                            + wrapInCountDownSpans('%D', 'dag%!S:e;')
+                            + wrapInCountDownSpans('%H', 'time%!S:r;')
+                            + wrapInCountDownSpans('%M', 'minut%!S:ter;')
+                            + wrapInCountDownSpans('%S', 'sekund%!S:er;')
+                            + '</span>'
+            ));
+        });
+    });
+</script>
+</body>
+</html>
+

@@ -2,7 +2,8 @@
     "require": {
         "mustache/mustache": "^2.9",
         "nesbot/carbon": "^1.21",
-        "phpunit/phpunit": "^4.8"
+        "phpunit/phpunit": "^4.8",
+        "altorouter/altorouter": "^1.1"
     },
     "autoload": {
         "psr-4": {"Lutzen\\": "src/"}

@@ -1,0 +1,160 @@
+::selection {
+	background: #C31919;
+	color: #ffffff;
+}
+
+::-moz-selection {
+	background: #ffffff;
+	color: #C31919;
+}
+
+body {
+	background: url(../img/bg.png);
+}
+
+.margin5 {
+	margin-top: 5%;
+}
+
+.margin-10 {
+	margin-bottom: 10%;
+}
+
+h1 {
+	font-family: 'nexabold', sans-serif;
+	color: #ffffff;
+	font-size: 49px;
+	line-height: 44px;
+	text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+h2 {
+	font-family: 'freehand', sans-serif;
+	color: #ffffff;
+	font-size: 48px;
+	line-height: 46px;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+	font-weight: normal;
+}
+
+.top {
+	text-align: center;
+}
+
+.footer {
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.footer a {
+	color:#ffffff;
+	margin: 0 8px;
+}
+
+.footer a:hover {
+	color: #E8E8E8;
+	text-decoration: none;
+}
+
+img {
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-ms-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+img:hover {
+	opacity: 0.8;
+}
+
+#audio {
+	display:none;
+}
+
+#audio-controls {
+	display:block;
+	position:fixed;
+	top:20px;
+	left:20px;
+	width:40px;
+	height:40px;
+	text-indent:-9999px;
+}
+
+.play {
+	background:url(../img/play.png) no-repeat;	
+}
+
+.pause {
+	background:url(../img/pause.png) no-repeat;	
+}
+
+.hasCountdown {
+	color: white;
+	font-family: 'nexabold';
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+	font-size: 24px;
+}
+
+.countdown_rtl {
+	direction: rtl;
+}
+
+.countdown_holding span {
+	color: #888;
+}
+
+.countdown_row {
+	clear: both;
+	width: 100%;
+	padding: 0px 2px;
+	text-align: center;
+}
+
+.countdown_show1 .countdown_section {
+	width: 98%;
+}
+
+.countdown_show2 .countdown_section {
+	width: 48%;
+}
+
+.countdown_show3 .countdown_section {
+	width: 32.5%;
+}
+
+.countdown_show4 .countdown_section {
+	width: 24.5%;
+}
+
+.countdown_show5 .countdown_section {
+	width: 19.5%;
+}
+
+.countdown_show6 .countdown_section {
+	width: 16.25%;
+}
+
+.countdown_show7 .countdown_section {
+	width: 14%;
+}
+
+.countdown_section {
+	display: block;
+	float: left;
+	font-size: 50%;
+	text-align: center;
+}
+
+.countdown_amount {
+	font-size: 300%;
+}
+
+.countdown_descr {
+	display: block;
+	width: 100%;
+}
