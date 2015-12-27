@@ -47,9 +47,9 @@
         };
         $('#countdown').countdown('{{countdownDate}}').on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime('<span class="countdown_row countdown_show4">'
-                            + wrapInCountDownSpans('%D', 'dag%!S:e;')
-                            + wrapInCountDownSpans('%H', 'time%!S:r;')
-                            + wrapInCountDownSpans('%M', 'minut%!S:ter;')
+                            + wrapInCountDownSpans('%D', 'dag%!D:e;')
+                            + wrapInCountDownSpans('%H', 'time%!H:r;')
+                            + wrapInCountDownSpans('%M', 'minut%!M:ter;')
                             + wrapInCountDownSpans('%S', 'sekund%!S:er;')
                             + '</span>'
             ));
