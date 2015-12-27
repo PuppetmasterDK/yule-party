@@ -20,7 +20,7 @@ $router->map( 'GET', '/', function() use($mustache) {
     $yulepartyDate = $yuleparty->getYulePartyDate();
     echo $tpl->render(array(
         'countdownDate' => $yulepartyDate->format("Y/m/d H:i:s"),
-        'date' => $yulepartyDate->formatLocalized("%d. %B kl. %H:%M"),
+        'date' => $yulepartyDate->formatLocalized("%d. %B %Y kl. %H:%M"),
     ));
 });
 
